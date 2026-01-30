@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: API OpenData Channels do Open Finance Brasil
   description: A API descrita neste documento é referente as API Channels da fase OpenData do Open Finance Brasil.
-  version: '2.0.1'
+  version: '2.0.2'
   contact:
     url: 'https://servicedesk.openbankingbrasil.org.br/Login.jsp?navLanguage=pt-BR'
 tags:
@@ -233,7 +233,7 @@ components:
           example: 'Empresa da Organização A'
         cnpjNumber:
           type: string
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: Número completo do CNPJ da instituição
           maxLength: 14
           minLength: 14
@@ -253,7 +253,7 @@ components:
           example: Empresa Contratante
         cnpjNumber:
           type: string
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: Número completo do CNPJ da instituição
           maxLength: 14
           minLength: 14
@@ -333,7 +333,7 @@ components:
           type: string
           minLength: 14
           maxLength: 14
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: |
             Número completo do CNPJ da instituição responsável pela dependência - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica.
             Deve-se ter apenas os números do CNPJ, sem máscara
@@ -411,7 +411,7 @@ components:
           pattern: ^(?!\s)[\w\W\s]*[^\s]$
         cnpjNumber:
             type: string
-            pattern: '^\d{14}$'
+            pattern: '^[0-9A-Z]{12}[0-9]{2}$'
             description: Número completo do CNPJ da instituição
             maxLength: 14
             minLength: 14
@@ -486,7 +486,7 @@ components:
           example: true
         cnpjNumber:
           type: string
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: Número completo do CNPJ da instituição
           maxLength: 14
           minLength: 14
@@ -1211,7 +1211,7 @@ components:
           example: 'Empresa da Organização A'
         cnpjNumber:
           type: string
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: Número completo do CNPJ da instituição
           maxLength: 14
           minLength: 14
@@ -1367,7 +1367,7 @@ components:
           example: "Empresa da Marca A"
         cnpjNumber:
           type: string
-          pattern: '^\d{14}$'
+          pattern: '^[0-9A-Z]{12}[0-9]{2}$'
           description: Número completo do CNPJ da instituição
           maxLength: 14
           minLength: 14
